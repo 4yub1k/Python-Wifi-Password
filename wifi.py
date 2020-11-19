@@ -3,7 +3,7 @@ import subprocess
 class t:
     def user(self):
         x_1=subprocess.Popen("netsh wlan show profiles",stdout=subprocess.PIPE) #run IDE as admin
-        stdout,stdin=x_1.communicate()
+        stdout=x_1.communicate()[0]
         return stdout
 
     def password_1(self,name):
